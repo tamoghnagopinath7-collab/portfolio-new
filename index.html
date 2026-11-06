@@ -1,226 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Agriculture – Digital Farming</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Tamoghna class="G"></Tamoghna> | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="#home" class="logo">🌾 Smart<span>Agri</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
-      <nav id="mainNav">
-        <a href="#home">Home</a>
-        <a href="#crops">Crops</a>
-        <a href="#methods">Methods</a>
-        <a href="#irrigation">Irrigation</a>
-        <a href="#fertilizers">Fertilizers</a>
-        <a href="#soil">Soil</a>
-        <a href="#tools">Tools</a>
-        <a href="#gallery">Gallery</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ===== HOME ===== -->
-  <section id="home" class="hero">
-    <div class="container hero-content">
-      <h1>Smart Agriculture<br><span>Digital Farming</span></h1>
-      <p>Grow more with less. Explore crop knowledge, modern farming methods, irrigation techniques, soil science and handy digital tools – all in one place.</p>
-      <div class="hero-buttons">
-        <a href="#crops" class="btn">Find a Crop</a>
-        <a href="#tools" class="btn btn-outline">Use Farming Tools</a>
-      </div>
-      <div class="stats">
-        <div><strong>8+</strong><span>Crops covered</span></div>
-        <div><strong>6</strong><span>Irrigation methods</span></div>
-        <div><strong>5</strong><span>Smart tools</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CROP SEARCH ===== -->
-  <section id="crops" class="section">
-    <div class="container">
-      <h2 class="section-title">Crop Information</h2>
-      <p class="section-sub">Search crops by name, season or soil type.</p>
-
-      <div class="search-box">
-        <input type="text" id="cropSearch" placeholder="🔍 Search crops (e.g. rice, kharif, loamy)...">
-      </div>
-      <div class="filter-row" id="seasonFilters">
-        <button class="chip active" data-season="all">All</button>
-        <button class="chip" data-season="Kharif">Kharif</button>
-        <button class="chip" data-season="Rabi">Rabi</button>
-        <button class="chip" data-season="Zaid">Zaid / Annual</button>
-      </div>
-      <div class="card-grid" id="cropResults"></div>
-      <p class="no-result" id="noCrop" hidden>No crops found. Try another search.</p>
-    </div>
-  </section>
-
-  <!-- ===== MODERN FARMING METHODS ===== -->
-  <section id="methods" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Modern Farming Methods</h2>
-      <p class="section-sub">Technology that raises yield and saves resources.</p>
-      <div class="card-grid">
-        <article class="info-card"><div class="icon">🏠</div><h3>Greenhouse Farming</h3><p>Crops grow in a controlled environment, giving protection from weather and pests and allowing year-round production.</p></article>
-        <article class="info-card"><div class="icon">💧</div><h3>Hydroponics</h3><p>Plants grow in nutrient-rich water without soil. It uses up to 90% less water and suits leafy greens and tomatoes.</p></article>
-        <article class="info-card"><div class="icon">🏢</div><h3>Vertical Farming</h3><p>Crops are stacked in layers indoors with LED lighting, ideal for cities with little land.</p></article>
-        <article class="info-card"><div class="icon">🛰️</div><h3>Precision Farming</h3><p>GPS, sensors and drones guide exact seed, water and fertilizer use for each part of the field.</p></article>
-        <article class="info-card"><div class="icon">🌿</div><h3>Organic Farming</h3><p>Uses compost, green manure and biological pest control instead of synthetic chemicals.</p></article>
-        <article class="info-card"><div class="icon">📱</div><h3>IoT &amp; Mobile Apps</h3><p>Soil moisture sensors and phone apps send alerts for irrigation, weather and market prices.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== IRRIGATION ===== -->
-  <section id="irrigation" class="section">
-    <div class="container">
-      <h2 class="section-title">Irrigation Techniques</h2>
-      <p class="section-sub">Click a method to see how it works.</p>
-      <div class="tabs" id="irrTabs"></div>
-      <div class="tab-panel" id="irrPanel"></div>
-    </div>
-  </section>
-
-  <!-- ===== FERTILIZERS ===== -->
-  <section id="fertilizers" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Fertilizers</h2>
-      <p class="section-sub">Feed your crop the right nutrients.</p>
-      <div class="card-grid">
-        <article class="info-card"><div class="icon n">N</div><h3>Nitrogen (N)</h3><p>Promotes leafy green growth. Sources: Urea (46% N), Ammonium sulphate.</p></article>
-        <article class="info-card"><div class="icon p">P</div><h3>Phosphorus (P)</h3><p>Strengthens roots and helps flowering. Sources: DAP, Single Super Phosphate.</p></article>
-        <article class="info-card"><div class="icon k">K</div><h3>Potassium (K)</h3><p>Improves disease resistance and fruit quality. Sources: Muriate of Potash (60% K₂O).</p></article>
-        <article class="info-card"><div class="icon">🐄</div><h3>Organic Manure</h3><p>Farmyard manure, compost and vermicompost improve soil structure and microbial life.</p></article>
-      </div>
-      <div class="note">⚠️ Always apply fertilizer based on a soil test. Over-fertilizing wastes money and harms soil and water.</div>
-    </div>
-  </section>
-
-  <!-- ===== SOIL ===== -->
-  <section id="soil" class="section">
-    <div class="container">
-      <h2 class="section-title">Soil Information</h2>
-      <p class="section-sub">Know your soil, know your crop.</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Soil Type</th><th>Texture</th><th>pH</th><th>Water Holding</th><th>Best Crops</th></tr></thead>
-          <tbody>
-            <tr><td>Alluvial</td><td>Fine, fertile</td><td>6.5–7.5</td><td>Good</td><td>Rice, wheat, sugarcane</td></tr>
-            <tr><td>Black (Regur)</td><td>Clayey</td><td>7.2–8.5</td><td>Very high</td><td>Cotton, soybean, sorghum</td></tr>
-            <tr><td>Red</td><td>Sandy loam</td><td>5.5–6.8</td><td>Low–Medium</td><td>Ragi, groundnut, millets</td></tr>
-            <tr><td>Laterite</td><td>Coarse, gravelly</td><td>5.0–6.0</td><td>Low</td><td>Cashew, tea, coffee</td></tr>
-            <tr><td>Sandy</td><td>Loose, gritty</td><td>6.0–7.5</td><td>Very low</td><td>Watermelon, groundnut</td></tr>
-            <tr><td>Loamy</td><td>Balanced</td><td>6.0–7.0</td><td>Good</td><td>Most vegetables &amp; cereals</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TOOLS ===== -->
-  <section id="tools" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Smart Farming Tools</h2>
-      <p class="section-sub">Quick calculators and helpers for the field.</p>
-
-      <div class="tool-grid">
-
-        <!-- Crop Information Finder -->
-        <div class="tool-card">
-          <h3>🌱 Crop Information Finder</h3>
-          <label for="cropSelect">Select a crop</label>
-          <select id="cropSelect"></select>
-          <div class="result" id="cropInfo">Choose a crop to see details.</div>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Tamoghna.G.</div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#goals">Goals</a>
+            <a href="#contact">Contact</a>
         </div>
+    </nav> 
 
-        <!-- Fertilizer Calculator -->
-        <div class="tool-card">
-          <h3>🧮 Fertilizer Calculator</h3>
-          <label for="fertCrop">Crop</label>
-          <select id="fertCrop"></select>
-          <label for="fertArea">Land area</label>
-          <div class="inline">
-            <input type="number" id="fertArea" min="0" step="0.1" placeholder="e.g. 2.5">
-            <select id="fertUnit">
-              <option value="acre">Acres</option>
-              <option value="hectare">Hectares</option>
-            </select>
-          </div>
-          <button class="btn" id="fertBtn">Calculate</button>
-          <div class="result" id="fertResult">Enter your land area to get a recommendation.</div>
+    <!-- 1. Hero / Home Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <span class="welcome-badge"><i class="fa-solid fa-sparkles"></i> Welcome to my digital space</span>
+            <h1>Hello, I'm Tamoghna.G<br><span><Tamoghna class="G"></Tamoghna></span></h1>
+            <p class="hero-subtitle">BCA Student | C Programmer | Software Enthusiast</p>
+            <p class="hero-desc">A passionate learner exploring the fascinating world of technology, programming, and software development. Building console applications and expanding my technical knowledge every day.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn primary-btn">Explore My World <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#contact" class="btn secondary-btn">Let's Connect</a>
+            </div>
         </div>
-
-        <!-- Weather -->
-        <div class="tool-card">
-          <h3>⛅ Sample Weather Information</h3>
-          <label for="weatherCity">Select location</label>
-          <select id="weatherCity"></select>
-          <div class="result weather" id="weatherResult"></div>
-          <small class="muted">Sample data for demonstration only.</small>
+        <div class="hero-image-container">
+            <img src="Profile.jpeg" alt="Tamoghna.G Profile Photograph">
         </div>
+    </section>
 
-        <!-- Random Tip -->
-        <div class="tool-card">
-          <h3>💡 Random Farming Tip</h3>
-          <blockquote id="tipText">Click the button for a farming tip!</blockquote>
-          <button class="btn" id="tipBtn">New Tip</button>
+    <!-- 2. About Me Section -->
+    <section id="about" class="content-section">
+        <h2>About Me.</h2>
+        <p class="section-tagline">Discover my journey and personality.</p>
+        <div class="about-card">
+            <p>I am <Tamoghna class="G"></Tamoghna>, currently residing in Bangalore, India, and pursuing my Bachelor of Computer Applications (BCA) degree program at REVA University. I have a strong interest in programming, data structures, and computer applications. I enjoy solving problems and continuously developing my technical knowledge through hands-on practice in C and other technologies. Beyond academics, I love exploring new ideas, maintaining curiosity, and disciplined habits. My vision is to become a skilled software maker and contribute meaningfully to the future of technology.</p>
         </div>
+    </section>
 
-      </div>
-    </div>
-  </section>
+    <!-- 3. Education Section -->
+    <section id="education" class="content-section">
+        <h2>My Education.</h2>
+        <p class="section-tagline">The foundation of my journey.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                    <p class="institution">REVA University, Bengaluru | Currently Pursuing</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>12th / PUC Details</h3>
+                    <p class="institution"> Christ | Completed</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>10th Standard Details</h3>
+                    <p class="institution"> St.Josheps| Completed with Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- ===== GALLERY ===== -->
-  <section id="gallery" class="section">
-    <div class="container">
-      <h2 class="section-title">Interactive Image Gallery</h2>
-      <p class="section-sub">Filter by category and click a picture to enlarge it.</p>
-      <div class="filter-row" id="galleryFilters">
-        <button class="chip active" data-cat="all">All</button>
-        <button class="chip" data-cat="crops">Crops</button>
-        <button class="chip" data-cat="tech">Technology</button>
-        <button class="chip" data-cat="water">Water</button>
-      </div>
-      <div class="gallery" id="galleryGrid"></div>
-    </div>
-  </section>
+    <!-- 4. My Skills Section -->
+    <section id="skills" class="content-section">
+        <h2>My Skills.</h2>
+        <p class="section-tagline">Technologies and fields I am exploring.</p>
+        <div class="skills-grid">
+            <div class="skill-badge"><i class="fa-solid fa-laptop-code">></i> Basic Computer Knowledge</div>
+            <div class="skill-badge"><i class="fa-solid fa-code"></i> C Programming (stdio.h, conio.h)</div>
+            <div class="skill-badge"><i class="fa-solid fa-globe"></i> HTML & DOM Basics</div>
+            <div class="skill-badge"><i class="fa-solid fa-file-code"></i> JavaScript Functions</div>
+            <div class="skill-badge"><i class="fa-solid fa-microchip"></i> Digital Logic & Boolean Algebra</div>
+            <div class="skill-badge"><i class="fa-solid fa-puzzle-piece"></i> Problem Solving & Algorithms</div>
+        </div>
+    </section>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" hidden>
-    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
-    <button class="lb-nav prev" id="lbPrev" aria-label="Previous">‹</button>
-    <div class="lb-content" id="lbContent"></div>
-    <button class="lb-nav next" id="lbNext" aria-label="Next">›</button>
-  </div>
+    <!-- 7. My Achievements Section -->
+    <section id="achievements" class="content-section">
+        <h2>My Achievements.</h2>
+        <p class="section-tagline">Every achievement is a step towards something greater.</p>
+        <div class="cards-grid">
+            <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-trophy"></i></div>
+                <h3>Academic Progress</h3>
+                <p>Successfully enrolled and maintaining strong academic rigor in the BCA program at REVA University.</p>
+            </div>
+            <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-code-merge"></i></div>
+                <h3>C Laboratory Index</h3>
+                <p>Formulated, coded, and compiled a structured 10-program C programming laboratory index and source repository.</p>
+            </div>
+            <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-certificate"></i></div>
+                <h3>Technical Projects</h3>
+                <p>Created robust console applications handling binary conversions, conditional algorithms, and loops.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- ===== FARMER TIPS FOOTER ===== -->
-  <section class="section tips-strip">
-    <div class="container">
-      <h2 class="section-title light">Farmer Tips</h2>
-      <ul class="tips-list">
-        <li>Rotate crops every season to break pest cycles and restore soil nutrients.</li>
-        <li>Mulch around plants to hold moisture and suppress weeds.</li>
-        <li>Water early in the morning to reduce evaporation loss.</li>
-        <li>Use certified seeds and treat them before sowing.</li>
-        <li>Keep farm records of inputs, costs and yields to plan better.</li>
-      </ul>
-    </div>
-  </section>
+    <!-- 5. My Hobbies & Interests Section -->
+    <section id="hobbies" class="content-section">
+        <h2>Beyond Academics.</h2>
+        <p class="section-tagline">My passions outside the classroom.</p>
+        <div class="cards-grid">
+            <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
+                <h3>Reading</h3>
+                <p>Enjoy reading literature, and stories.</p>
+            </div>
+            <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-plane"></i></div>
+                <h3>Travelling</h3>
+                <p>Exploring new places, experiencing different cultures, and gaining fresh perspectives.</p>
+            </div>
+            <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-gamepad"></i></div>
+                <h3>Gaming & Tech</h3>
+                <p>Keeping up with experimental software releases through the Windows Insider Program and engaging with interactive platforms.</p>
+            </div>
+        </div>
+    </section>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Smart Agriculture – Digital Farming | Educational project</p>
-  </footer>
+    <!-- 6. My Goals Section -->
+    <section id="goals" class="content-section">
+        <h2>My Goals.</h2>
+        <p class="section-tagline">Dream big. Build bigger.</p>
+        <div class="about-card">
+            <p><strong>Short-Term Goals:</strong> Master advanced data structures, algorithms, and core programming paradigms during my BCA coursework while building practical web and software projects.<br><br>
+            <strong>Long-Term Career Goals:</strong> Aim to become a premier software maker and developer, working on innovative technologies that create real-world impact.<br><br>
+            <strong>Engineering & Tech Aspirations:</strong> Build a deep foundation in computer applications, write clean and efficient code, and develop scalable applications that solve meaningful challenges.</p>
+        </div>
+    </section>
 
-  <button id="toTop" class="to-top" aria-label="Back to top" hidden>↑</button>
+    <!-- 8. Contact Me Section -->
+    <section id="contact" class="content-section contact-section">
+        <h2>Let's Connect.</h2>
+        <p class="section-tagline">Have an interesting idea or simply want to connect? Feel free to reach out.</p>
+        <div class="contact-box">
+            <a href="mailto:tamoghnagopinath7@example.com" class="btn primary-btn"><i class="fa-solid fa-envelope"></i> Send Me An Email</a>
+            <div class="social-links">
+                <a href="https://github.com/XxYugxX" target="_blank"><i class="fa-brands fa-github"></i> GitHub (XxYugxX)</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Yug Sapkota | Crafted with creativity & passion ✨</p>
+    </footer>
 </body>
 </html>
